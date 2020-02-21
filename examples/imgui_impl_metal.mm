@@ -448,8 +448,7 @@ void ImGui_ImplMetal_DestroyDeviceObjects()
 
     [commandEncoder setRenderPipelineState:renderPipelineState];
 
-    [commandEncoder setVertexBuffer:vertexBuffer.buffer offset:0 atIndex:0];
-    [commandEncoder setVertexBufferOffset:vertexBufferOffset atIndex:0];
+    [commandEncoder setVertexBuffer:vertexBuffer.buffer offset:vertexBufferOffset atIndex:0];
 }
 
 - (void)renderDrawData:(ImDrawData *)drawData
